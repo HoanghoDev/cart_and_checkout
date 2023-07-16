@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1",
+        "price": 520,
+        "image": "images/1.webp"
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "price": 220,
+        "image": "images/2.webp"
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "price": 250,
+        "image": "images/3.webp"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Product 4",
+        "price": 420,
+        "image": "images/4.webp"
+    },
+    {
+        "id": 5,
+        "name": "Product 5",
+        "price": 120,
+        "image": "images/5.webp"
+    }
+]
