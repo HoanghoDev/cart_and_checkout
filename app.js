@@ -51,10 +51,15 @@ function addDataToHTML(){
     }
 }
 //use sessionStorage so the cart doesn't get lost on refresh page
-let listCart = null;
+
+
+let listCart = [];
 function checkCart(){
-    if(sessionStorage.getItem("listCart")){
-        listCart = JSON.parse(sessionStorage.getItem("listCart"));
+    var cookieValue = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('listCart='));
+    if(cookieValue){
+        listCart = JSON.parse(cookieValue.split('=')[1]);
     }else{
         listCart = [];
     }
@@ -72,7 +77,8 @@ function addCart($idProduct){
         //I just increased the quantity
         listCart[$idProduct].quantity++;
     }
-    sessionStorage.setItem("listCart", JSON.stringify(listCart));
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+
     addCartToHTML();
 }
 addCartToHTML();
@@ -125,7 +131,7 @@ function changeQuantity($idProduct, $type){
             break;
     }
     // save new data in sessionStorage
-    sessionStorage.setItem("listCart", JSON.stringify(listCart));
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
     // reload html view cart
     addCartToHTML();
 }

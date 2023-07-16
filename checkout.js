@@ -1,10 +1,11 @@
-let listCart = null;
+let listCart = [];
 function checkCart(){
-    if(sessionStorage.getItem("listCart")){
-        listCart = JSON.parse(sessionStorage.getItem("listCart"));
-    }else{
-        listCart = [];
-    }
+        var cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('listCart='));
+        if(cookieValue){
+            listCart = JSON.parse(cookieValue.split('=')[1]);
+        }
 }
 checkCart();
 addCartToHTML();
