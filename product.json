@@ -29,5 +29,11 @@
         "name": "Product 5",
         "price": 120,
         "image": "images/5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Product 6",
+        "price": 120,
+        "image": "images/6.webp"
     }
 ]

@@ -9,7 +9,7 @@ a{
 .container{
     width: 1200px;
     margin: auto;
-    max-width: 100vw;
+    max-width: 90%;
     transition: transform 1s;
 }
 header img{

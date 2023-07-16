@@ -50,7 +50,7 @@ function addDataToHTML(){
         });
     }
 }
-//use sessionStorage so the cart doesn't get lost on refresh page
+//use cookie so the cart doesn't get lost on refresh page
 
 
 let listCart = [];
@@ -130,7 +130,7 @@ function changeQuantity($idProduct, $type){
         default:
             break;
     }
-    // save new data in sessionStorage
+    // save new data in cookie
     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
     // reload html view cart
     addCartToHTML();

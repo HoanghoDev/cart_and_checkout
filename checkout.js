@@ -39,5 +39,5 @@ function addCartToHTML(){
         })
     }
     totalQuantityHTML.innerText = totalQuantity;
-    totalPriceHTML.innerText = totalPrice;
+    totalPriceHTML.innerText = '$' + totalPrice;
 }
